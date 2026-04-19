@@ -34,12 +34,19 @@ img {
   --primary-color: hsl(47, 88%, 63%);
   --gray-500: hsl(0, 0%, 42%);
   --gray-950: hsl(0, 0%, 7%);
-  --font-size: 16px;
+  --font-size-paragraph: 16px;
+  --font-size-heading: 24px;
+  --font-size-small: 14px;
+  @media (max-width: 384px) {
+    --font-size-paragraph: 14px;
+    --font-size-heading: 20px;
+    --font-size-small: 12px;
+  }
 }
 
 body {
   font-family: "Figtree", sans-serif;
-  font-size: var(--font-size);
+  font-size: var(--font-size-paragraph);
 }
 
 .wrapper {
@@ -84,16 +91,16 @@ body {
   padding-inline: 12px;
   padding-block: 4px;
   border-radius: 4px;
-  font-size: 0.875em;
+  font-size: var(--font-size-small);
   font-weight: 800;
 }
 
 .card-date {
-  font-size: 0.875em;
+  font-size: var(--font-size-small);
 }
 
 .card-title {
-  font-size: 1.5em;
+  font-size: var(--font-size-heading);
   font-weight: 800;
 }
 
@@ -110,7 +117,7 @@ body {
   display: flex;
   gap: 12px;
   font-weight: 800;
-  font-size: 0.875em;
+  font-size: var(--font-size-small);
   align-items: center;
 }
 
